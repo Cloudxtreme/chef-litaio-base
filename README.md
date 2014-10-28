@@ -12,7 +12,7 @@ This is a Chef cookbook for standard configuration applied to all lita.io server
 * Runs the *users* recipe.
 * Installs NTP.
 * Installs Vim.
-* Installs Docker.
+* Installs Docker and adds the created users to the docker group.
 
 ### users
 

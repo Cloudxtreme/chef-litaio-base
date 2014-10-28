@@ -6,8 +6,12 @@ users = [{
   ]
 }]
 
+user_ids = users.map { |user| user[:id] }
+
 default[:authorization][:sudo][:passwordless] = true
-default[:authorization][:sudo][:users] = users.map { |user| user[:id] }
+default[:authorization][:sudo][:users] = user_ids
+
+default[:docker][:group_members] = user_ids
 
 default[:openssh][:server][:password_authentication] = 'no'
 default[:openssh][:server][:permit_root_login] = 'no'
