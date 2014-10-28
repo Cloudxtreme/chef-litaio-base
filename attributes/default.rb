@@ -13,6 +13,8 @@ default[:authorization][:sudo][:users] = user_ids
 
 default[:docker][:group_members] = user_ids
 
+default[:ntp][:apparmor_enabled] = false
+
 default[:openssh][:server][:password_authentication] = 'no'
 default[:openssh][:server][:permit_root_login] = 'no'
 default[:openssh][:server][:subsystem] = 'sftp internal-sftp'
