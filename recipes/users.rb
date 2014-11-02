@@ -6,4 +6,10 @@ node[:litaio][:base][:users].each do |user_data|
   end
 end
 
+user_ids = node[:litaio][:base][:users].map { |user_data| user_data['id'] }
+
+group 'sudo' do
+  members user_ids
+end
+
 include_recipe 'sudo'
