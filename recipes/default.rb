@@ -1,7 +1,7 @@
 include_recipe 'apt'
 include_recipe 'hostname'
-include_recipe 'openssh'
 include_recipe 'litaio_base::users'
 include_recipe 'ntp'
 include_recipe 'vim'
 include_recipe 'docker'
+include_recipe 'openssh'
